@@ -2,36 +2,36 @@
   "easy": [
     {
       "id": 1,
-      "question": "What is 2 + 2?",
-      "options": ["3", "4", "5", "6"],
+      "question": "၂ + ၂ ဆိုရင် ဘယ်လောက်လဲ?",
+      "options": ["၃", "၄", "၅", "၆"],
       "correct": 1,
       "xp": 10
     },
     {
       "id": 2,
-      "question": "What color is the sky?",
-      "options": ["Red", "Blue", "Green", "Yellow"],
+      "question": "ကောင်းကင်ရဲ့ အရောင်က ဘာလဲ?",
+      "options": ["အနီ", "အပြာ", "အစိမ်း", "အဝါ"],
       "correct": 1,
       "xp": 10
     },
     {
       "id": 3,
-      "question": "Which animal says 'Meow'?",
-      "options": ["Dog", "Cat", "Cow", "Duck"],
+      "question": "'Meow' လို့ အသံထွက်တဲ့ တိရစ္ဆာန်က ဘာလဲ?",
+      "options": ["ခွေး", "ကြောင်", "နွား", "ဘဲ"],
       "correct": 1,
       "xp": 10
     },
     {
       "id": 4,
-      "question": "How many days in a week?",
-      "options": ["5", "6", "7", "8"],
+      "question": "တစ်ပတ်မှာ ဘယ်နှစ်ရက်ရှိသလဲ?",
+      "options": ["၅", "၆", "၇", "၈"],
       "correct": 2,
       "xp": 10
     },
     {
       "id": 5,
-      "question": "What is the opposite of hot?",
-      "options": ["Warm", "Cool", "Cold", "Boiling"],
+      "question": "ပူခြင်းရဲ့ ဆန့်ကျင်ဘက်က ဘာလဲ?",
+      "options": ["နွေး", "အေးအေး", "အေး", "အပူပြင်း"],
       "correct": 2,
       "xp": 10
     }
@@ -39,36 +39,36 @@
   "medium": [
     {
       "id": 6,
-      "question": "What is the capital of France?",
-      "options": ["London", "Berlin", "Paris", "Madrid"],
+      "question": "ပြင်သစ်နိုင်ငံရဲ့ မြို့တော်က ဘာလဲ?",
+      "options": ["လန်ဒန်", "ဘာလင်", "ပဲရစ်", "မက်ဒရစ်"],
       "correct": 2,
       "xp": 25
     },
     {
       "id": 7,
-      "question": "Which planet is known as the Red Planet?",
-      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "question": "အနီရောင်ဂြိုဟ်လို့ ခေါ်တဲ့ ဂြိုဟ်က ဘာလဲ?",
+      "options": ["ဗီးနပ်စ်", "မာစ်စ်", "ဂျူပီတာ", "ဆက်တန်"],
       "correct": 1,
       "xp": 25
     },
     {
       "id": 8,
-      "question": "What is the square root of 64?",
-      "options": ["6", "7", "8", "9"],
+      "question": "၆၄ ရဲ့ စတုရန်းမြစ်က ဘယ်လောက်လဲ?",
+      "options": ["၆", "၇", "၈", "၉"],
       "correct": 2,
       "xp": 25
     },
     {
       "id": 9,
-      "question": "Who painted the Mona Lisa?",
-      "options": ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo"],
+      "question": "Mona Lisa ပန်းချီကို ဘယ်သူ ရေးခဲ့တာလဲ?",
+      "options": ["ဗန်ဂေါ့", "ပီကာဆို", "ဒါဗင်ချီ", "မီခယ်လန်ဂျလို"],
       "correct": 2,
       "xp": 25
     },
     {
       "id": 10,
-      "question": "What is the largest ocean on Earth?",
-      "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+      "question": "ကမ္ဘာပေါ်မှာ အကြီးဆုံး သမုဒ္ဓရာက ဘာလဲ?",
+      "options": ["အတ္တလန်တစ်", "အိန္ဒိယ", "အာတိတ်", "ပစိဖိတ်"],
       "correct": 3,
       "xp": 25
     }
@@ -76,35 +76,35 @@
   "hard": [
     {
       "id": 11,
-      "question": "What is the chemical symbol for gold?",
+      "question": "ရွှေ၏ ဓာတုလက္ခဏာ (symbol) က ဘာလဲ?",
       "options": ["Go", "Gd", "Au", "Ag"],
       "correct": 2,
       "xp": 50
     },
     {
       "id": 12,
-      "question": "In what year did World War II end?",
-      "options": ["1943", "1944", "1945", "1946"],
+      "question": "ဒုတိယကမ္ဘာစစ် ဘယ်နှစ်ခုနှစ်မှာ အဆုံးသတ်ခဲ့သလဲ?",
+      "options": ["၁၉၄၃", "၁၉၄၄", "၁၉၄၅", "၁၉၄၆"],
       "correct": 2,
       "xp": 50
     },
     {
       "id": 13,
-      "question": "What is the speed of light in km/s (approx)?",
+      "question": "အလင်းရဲ့ အမြန်နှုန်း (km/s) ခန့်မှန်းအားဖြင့် ဘယ်လောက်လဲ?",
       "options": ["150,000", "200,000", "300,000", "400,000"],
       "correct": 2,
       "xp": 50
     },
     {
       "id": 14,
-      "question": "Who developed the theory of relativity?",
-      "options": ["Newton", "Einstein", "Hawking", "Tesla"],
+      "question": "Relativity သီအိုရီကို ဘယ်သူ တီထွင်ခဲ့သလဲ?",
+      "options": ["နျူတန်", "အိုင်စတိုင်း", "ဟော့ကင်း", "တက်စလာ"],
       "correct": 1,
       "xp": 50
     },
     {
       "id": 15,
-      "question": "What is the powerhouse of the cell?",
+      "question": "ဆဲလ်အတွင်း စွမ်းအင်ထုတ်လုပ်ရာ အဓိက အစိတ်အပိုင်းကို ဘာလို့ ခေါ်သလဲ?",
       "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"],
       "correct": 2,
       "xp": 50
