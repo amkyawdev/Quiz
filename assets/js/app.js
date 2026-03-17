@@ -1,8 +1,23 @@
 // Main application component with Alpine.js initialization
 
+// Load sound effects
+const soundScript = document.createElement('script');
+soundScript.src = './assets/js/sounds.js';
+document.head.appendChild(soundScript);
+
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
+});
+
+// Add sound to all buttons
+document.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+    if (window.SoundManager) {
+      window.SoundManager.initAudio();
+      window.SoundManager.playButton();
+    }
+  }
 });
 
 function initApp() {
@@ -168,7 +183,15 @@ function initQuizPage() {
     .then(data => {
       const allQuestions = data[difficulty] || [];
       const questionCount = parseInt(urlParams.get('count')) || 100;
-      questions = allQuestions.sort(() => Math.random() - 0.5).slice(0, questionCount);
+      const levelFilter = urlParams.get('level');
+      
+      // Filter by level if specified (1-10)
+      let filteredQuestions = allQuestions;
+      if (levelFilter) {
+        filteredQuestions = allQuestions.filter(q => q.level === parseInt(levelFilter));
+      }
+      
+      questions = filteredQuestions.sort(() => Math.random() - 0.5).slice(0, questionCount);
       showQuestion();
     })
     .catch(err => console.error('Error loading questions:', err));
@@ -211,6 +234,15 @@ function initQuizPage() {
     const question = questions[currentIndex];
     const isCorrect = answerIndex === question.correct;
     const baseXp = { easy: 10, medium: 25, hard: 50 };
+    
+    // Play sound effects
+    if (window.SoundManager) {
+      if (isCorrect) {
+        window.SoundManager.playCorrect();
+      } else {
+        window.SoundManager.playWrong();
+      }
+    }
     
     // Show feedback
     showFeedback(isCorrect, question.correct);
@@ -325,6 +357,17 @@ function initQuizPage() {
   // End quiz
   function endQuiz() {
     stopTimer();
+    
+    const percentage = Math.round((correctAnswers / questions.length) * 100);
+    
+    // Play sound effects based on result
+    if (window.SoundManager) {
+      if (percentage >= 50) {
+        window.SoundManager.playApplause();
+      } else {
+        window.SoundManager.playGroan();
+      }
+    }
     
     const results = {
       totalQuestions: questions.length,
