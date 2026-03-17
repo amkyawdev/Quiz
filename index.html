@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster 3D - The Ultimate Quiz Experience</title>
+  <meta name="description" content="Challenge yourself with QuizMaster 3D - A modern quiz game with XP, levels, and stunning 3D visuals">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <!-- Floating Background Shapes -->
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Navbar -->
+  <div id="navbar-container">
+    <nav class="navbar-3d">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-link">
+          <span class="brand-icon">🎯</span>
+          <span class="brand-text">QuizMaster</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <main class="hero">
+    <h1 class="hero-title">QuizMaster 3D</h1>
+    <p class="hero-subtitle">Challenge your knowledge with our immersive 3D quiz experience. Earn XP, level up, and become a champion!</p>
+
+    <!-- Login Section -->
+    <section id="login-section" class="login-section">
+      <div class="login-card">
+        <h2 class="login-title">🎮 Ready to Play?</h2>
+        
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username" class="form-label">Enter Your Name</label>
+            <input 
+              type="text" 
+              id="username" 
+              class="form-input" 
+              placeholder="Your username..." 
+              maxlength="20" 
+              required
+              autocomplete="off"
+            >
+          </div>
+          
+          <button type="submit" class="btn btn-primary">
+            <span>Continue</span>
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Welcome Section (Logged In) -->
+    <section id="welcome-section" class="welcome-section">
+      <div class="welcome-card">
+        <div class="welcome-avatar">👤</div>
+        <h2 class="welcome-username">Welcome, <span id="username-display">Player</span>!</h2>
+        
+        <div class="welcome-stats">
+          <div class="welcome-stat">
+            <div class="stat-value" id="user-xp">0 XP</div>
+            <div class="stat-label">Total XP</div>
+          </div>
+          <div class="welcome-stat">
+            <div class="stat-value" id="user-level">Level 1</div>
+            <div class="stat-label">Current Level</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Difficulty Selection -->
+    <section class="difficulty-section">
+      <h3 class="difficulty-title">Choose Your Difficulty</h3>
+      
+      <div class="difficulty-buttons">
+        <button class="difficulty-btn active" data-difficulty="easy" style="--btn-color: #48c774;">
+          <span class="difficulty-icon">⭐</span>
+          <span class="difficulty-label">Easy</span>
+        </button>
+        
+        <button class="difficulty-btn" data-difficulty="medium" style="--btn-color: #ffdd57;">
+          <span class="difficulty-icon">⭐⭐</span>
+          <span class="difficulty-label">Medium</span>
+        </button>
+        
+        <button class="difficulty-btn" data-difficulty="hard" style="--btn-color: #f14668;">
+          <span class="difficulty-icon">⭐⭐⭐</span>
+          <span class="difficulty-label">Hard</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Start Button -->
+    <button id="start-btn" class="btn btn-primary mt-3">
+      <span>🚀</span>
+      <span>Start Quiz</span>
+    </button>
+
+    <!-- Features -->
+    <div class="features mt-4">
+      <div class="feature-card">
+        <span class="feature-icon">🏆</span>
+        <span class="feature-text">Compete for High Scores</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <span class="feature-text">Fast-Paced Gameplay</span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎨</span>
+        <span class="feature-text">Stunning 3D Visuals</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

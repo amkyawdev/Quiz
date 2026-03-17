@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - QuizMaster 3D</title>
+  <meta name="description" content="QuizMaster 3D - Your profile and stats">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Profile Container -->
+  <main class="profile-container">
+    <!-- Profile Header -->
+    <header class="profile-header">
+      <div class="profile-avatar">👤</div>
+      <h1 class="profile-username" id="profile-username">Player</h1>
+      <div class="profile-level" id="level-badge">Level <span id="profile-level">1</span></div>
+      <p class="level-title" id="level-title">Novice</p>
+    </header>
+
+    <!-- XP Section -->
+    <section class="xp-section">
+      <div class="xp-header">
+        <span class="xp-label">Experience Points</span>
+        <span class="xp-value" id="total-xp">0 XP</span>
+      </div>
+      <div class="xp-bar">
+        <div class="xp-bar-fill" id="xp-progress" style="width: 0%"></div>
+      </div>
+      <div class="xp-footer">
+        <span id="xp-current">0 / 100 XP</span>
+        <span>Next Level</span>
+      </div>
+    </section>
+
+    <!-- Stats Grid -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">🎮</div>
+        <div class="stat-value" id="games-played">0</div>
+        <div class="stat-label">Games Played</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-value" id="correct-answers">0</div>
+        <div class="stat-label">Correct Answers</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">📝</div>
+        <div class="stat-value" id="total-questions">0</div>
+        <div class="stat-label">Total Questions</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-value" id="accuracy">0%</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+    </section>
+
+    <!-- Profile Actions -->
+    <section class="profile-actions">
+      <button id="play-quiz-btn" class="btn btn-primary">
+        <span>🚀</span>
+        <span>Play Quiz</span>
+      </button>
+      
+      <button id="logout-profile-btn" class="btn btn-secondary">
+        <span>🚪</span>
+        <span>Logout</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

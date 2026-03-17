@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - QuizMaster 3D</title>
+  <meta name="description" content="Play QuizMaster 3D - Test your knowledge now!">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Quiz Container -->
+  <main class="quiz-container">
+    <!-- Quiz Header -->
+    <header class="quiz-header">
+      <div class="quiz-progress">
+        <div class="progress-text" id="progress-text">Question 1 of 5</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+      
+      <div class="quiz-stats">
+        <div class="quiz-stat">
+          <span id="score-text">Score: 0</span>
+        </div>
+        <div class="quiz-stat">
+          <span id="xp-text">+0 XP</span>
+        </div>
+        <div class="quiz-stat streak">
+          <span id="streak-text">🔥 0</span>
+        </div>
+        <div class="quiz-stat timer">
+          <span id="timer-display">⏱️ 20s</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Question Card -->
+    <article class="question-card">
+      <h2 class="question-text" id="question-text">
+        Loading question...
+      </h2>
+      
+      <!-- Answers -->
+      <div class="answers-grid" id="answers-container">
+        <div class="spinner"></div>
+      </div>
+    </article>
+
+    <!-- Feedback Container -->
+    <div id="feedback-container"></div>
+  </main>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" class="page-loader">
+    <div class="spinner"></div>
+    <div class="page-loader-text">Loading quiz...</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/app.js"></script>
+  <script>
+    // Hide loading overlay when quiz starts
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const overlay = document.getElementById('loading-overlay');
+        if (overlay) {
+          overlay.style.opacity = '0';
+          overlay.style.transition = 'opacity 0.5s';
+          setTimeout(() => overlay.remove(), 500);
+        }
+      }, 500);
+    });
+  </script>
+</body>
+</html>

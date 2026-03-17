@@ -1,0 +1,113 @@
+{
+  "easy": [
+    {
+      "id": 1,
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "6"],
+      "correct": 1,
+      "xp": 10
+    },
+    {
+      "id": 2,
+      "question": "What color is the sky?",
+      "options": ["Red", "Blue", "Green", "Yellow"],
+      "correct": 1,
+      "xp": 10
+    },
+    {
+      "id": 3,
+      "question": "Which animal says 'Meow'?",
+      "options": ["Dog", "Cat", "Cow", "Duck"],
+      "correct": 1,
+      "xp": 10
+    },
+    {
+      "id": 4,
+      "question": "How many days in a week?",
+      "options": ["5", "6", "7", "8"],
+      "correct": 2,
+      "xp": 10
+    },
+    {
+      "id": 5,
+      "question": "What is the opposite of hot?",
+      "options": ["Warm", "Cool", "Cold", "Boiling"],
+      "correct": 2,
+      "xp": 10
+    }
+  ],
+  "medium": [
+    {
+      "id": 6,
+      "question": "What is the capital of France?",
+      "options": ["London", "Berlin", "Paris", "Madrid"],
+      "correct": 2,
+      "xp": 25
+    },
+    {
+      "id": 7,
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "correct": 1,
+      "xp": 25
+    },
+    {
+      "id": 8,
+      "question": "What is the square root of 64?",
+      "options": ["6", "7", "8", "9"],
+      "correct": 2,
+      "xp": 25
+    },
+    {
+      "id": 9,
+      "question": "Who painted the Mona Lisa?",
+      "options": ["Van Gogh", "Picasso", "Da Vinci", "Michelangelo"],
+      "correct": 2,
+      "xp": 25
+    },
+    {
+      "id": 10,
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+      "correct": 3,
+      "xp": 25
+    }
+  ],
+  "hard": [
+    {
+      "id": 11,
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "correct": 2,
+      "xp": 50
+    },
+    {
+      "id": 12,
+      "question": "In what year did World War II end?",
+      "options": ["1943", "1944", "1945", "1946"],
+      "correct": 2,
+      "xp": 50
+    },
+    {
+      "id": 13,
+      "question": "What is the speed of light in km/s (approx)?",
+      "options": ["150,000", "200,000", "300,000", "400,000"],
+      "correct": 2,
+      "xp": 50
+    },
+    {
+      "id": 14,
+      "question": "Who developed the theory of relativity?",
+      "options": ["Newton", "Einstein", "Hawking", "Tesla"],
+      "correct": 1,
+      "xp": 50
+    },
+    {
+      "id": 15,
+      "question": "What is the powerhouse of the cell?",
+      "options": ["Nucleus", "Ribosome", "Mitochondria", "Golgi body"],
+      "correct": 2,
+      "xp": 50
+    }
+  ]
+}
