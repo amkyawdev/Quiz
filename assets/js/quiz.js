@@ -19,11 +19,12 @@ let timeLeft = 0;
 /**
  * Load questions from JSON
  * @param {string} difficultyLevel - Difficulty level (easy, medium, hard)
+ * @param {string} dataFile - Data file name (default: questions.json)
  * @returns {Promise<Array>} Questions array
  */
-export async function loadQuestions(difficultyLevel = 'easy') {
+export async function loadQuestions(difficultyLevel = 'easy', dataFile = 'questions.json') {
   try {
-    const response = await fetch('./data/questions.json');
+    const response = await fetch(`./data/${dataFile}`);
     const data = await response.json();
     questions = data[difficultyLevel] || [];
     return questions;

@@ -137,6 +137,7 @@ function initIndexPage() {
 function initQuizPage() {
   const urlParams = new URLSearchParams(window.location.search);
   const difficulty = urlParams.get('difficulty') || 'easy';
+  const dataFile = urlParams.get('data') || 'questions.json';
   
   // Initialize quiz state
   let questions = [];
@@ -161,8 +162,8 @@ function initQuizPage() {
   const timerDisplay = document.getElementById('timer-display');
   const feedbackContainer = document.getElementById('feedback-container');
   
-  // Load questions
-  fetch('./data/questions.json')
+  // Load questions from specified data file
+  fetch(`./data/${dataFile}`)
     .then(res => res.json())
     .then(data => {
       const allQuestions = data[difficulty] || [];
