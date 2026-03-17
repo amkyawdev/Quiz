@@ -135,22 +135,48 @@ function playWrongSound() {
   }
 }
 
-// Background music using Web Audio API
+// Background music using Web Audio API with MP3 file
 let bgmOscillators = [];
 let bgmGain = null;
 let isBgmPlaying = false;
+let bgmAudio = null;
 
 function playBackgroundMusic() {
   if (isBgmPlaying) return;
   
   try {
+    // Try to play from MP3 file first
+    bgmAudio = new Audio('./assets/music/background.mp3');
+    bgmAudio.loop = true;
+    bgmAudio.volume = 0.3;
+    
+    // Try to play, handle autoplay restrictions
+    const playPromise = bgmAudio.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        isBgmPlaying = true;
+        console.log('Background music started');
+      }).catch(error => {
+        console.log('Audio autoplay prevented, using synthesized music');
+        playSynthBackgroundMusic();
+      });
+    }
+  } catch (e) {
+    console.log('MP3 not available, using synthesized music');
+    playSynthBackgroundMusic();
+  }
+}
+
+function playSynthBackgroundMusic() {
+  // Fallback: synthesized melody
+  try {
     const ctx = initAudio();
     bgmGain = ctx.createGain();
     bgmGain.connect(ctx.destination);
-    bgmGain.gain.value = 0.05; // Very quiet background music
+    bgmGain.gain.value = 0.05;
     
-    // Simple melody loop
-    const melody = [261, 293, 329, 349, 392, 329, 293, 261]; // C D E F G E D C
+    const melody = [261, 293, 329, 349, 392, 329, 293, 261];
     let noteIndex = 0;
     
     function playNote() {
@@ -172,7 +198,6 @@ function playBackgroundMusic() {
       osc.stop(ctx.currentTime + 0.4);
       
       noteIndex = (noteIndex + 1) % melody.length;
-      
       setTimeout(playNote, 500);
     }
     
@@ -185,6 +210,10 @@ function playBackgroundMusic() {
 
 function stopBackgroundMusic() {
   isBgmPlaying = false;
+  if (bgmAudio) {
+    bgmAudio.pause();
+    bgmAudio = null;
+  }
   if (bgmGain) {
     bgmGain.disconnect();
     bgmGain = null;
