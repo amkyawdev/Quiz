@@ -167,7 +167,8 @@ function initQuizPage() {
     .then(res => res.json())
     .then(data => {
       const allQuestions = data[difficulty] || [];
-      questions = allQuestions.sort(() => Math.random() - 0.5).slice(0, 5);
+      const questionCount = parseInt(urlParams.get('count')) || 100;
+      questions = allQuestions.sort(() => Math.random() - 0.5).slice(0, questionCount);
       showQuestion();
     })
     .catch(err => console.error('Error loading questions:', err));
